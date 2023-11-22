@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "electronics",
+  "info": {
+    "singularName": "electronic",
+    "pluralName": "electronics",
+    "displayName": "electronic"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal"
+    }
+  }
+}
