@@ -482,6 +482,50 @@ export interface PluginUploadFolder extends Schema.CollectionType {
   };
 }
 
+export interface PluginI18NLocale extends Schema.CollectionType {
+  collectionName: 'i18n_locale';
+  info: {
+    singularName: 'locale';
+    pluralName: 'locales';
+    collectionName: 'locales';
+    displayName: 'Locale';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.SetMinMax<{
+        min: 1;
+        max: 50;
+      }>;
+    code: Attribute.String & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'plugin::i18n.locale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'plugin::i18n.locale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUsersPermissionsPermission
   extends Schema.CollectionType {
   collectionName: 'up_permissions';
@@ -633,50 +677,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface PluginI18NLocale extends Schema.CollectionType {
-  collectionName: 'i18n_locale';
-  info: {
-    singularName: 'locale';
-    pluralName: 'locales';
-    collectionName: 'locales';
-    displayName: 'Locale';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    name: Attribute.String &
-      Attribute.SetMinMax<{
-        min: 1;
-        max: 50;
-      }>;
-    code: Attribute.String & Attribute.Unique;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'plugin::i18n.locale',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'plugin::i18n.locale',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiBookBook extends Schema.CollectionType {
   collectionName: 'books';
   info: {
@@ -691,8 +691,13 @@ export interface ApiBookBook extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     description: Attribute.Text;
-    price: Attribute.Decimal;
     author: Attribute.String;
+    picture: Attribute.Media;
+    status: Attribute.Enumeration<['in stock', 'out of stock', 'on sale']> &
+      Attribute.Required;
+    sold_by: Attribute.String;
+    price: Attribute.Decimal;
+    quantity: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -709,6 +714,7 @@ export interface ApiCdCd extends Schema.CollectionType {
     singularName: 'cd';
     pluralName: 'cds';
     displayName: 'cd';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -716,7 +722,11 @@ export interface ApiCdCd extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     description: Attribute.Text;
+    picture: Attribute.Media;
+    sold_by: Attribute.String;
+    status: Attribute.Enumeration<['in stock', 'out of stock', 'on sale']>;
     price: Attribute.Decimal;
+    quantity: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -733,6 +743,7 @@ export interface ApiElectronicElectronic extends Schema.CollectionType {
     singularName: 'electronic';
     pluralName: 'electronics';
     displayName: 'electronic';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -740,7 +751,11 @@ export interface ApiElectronicElectronic extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     description: Attribute.Text;
+    picture: Attribute.Media;
+    status: Attribute.Enumeration<['in stock', 'out of stock', 'on sale']>;
+    sold_by: Attribute.String;
     price: Attribute.Decimal;
+    quantity: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -771,10 +786,10 @@ declare module '@strapi/types' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
+      'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'plugin::i18n.locale': PluginI18NLocale;
       'api::book.book': ApiBookBook;
       'api::cd.cd': ApiCdCd;
       'api::electronic.electronic': ApiElectronicElectronic;

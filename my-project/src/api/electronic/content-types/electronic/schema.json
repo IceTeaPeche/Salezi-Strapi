@@ -4,7 +4,8 @@
   "info": {
     "singularName": "electronic",
     "pluralName": "electronics",
-    "displayName": "electronic"
+    "displayName": "electronic",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,8 +18,33 @@
     "description": {
       "type": "text"
     },
+    "picture": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "in stock",
+        "out of stock",
+        "on sale"
+      ]
+    },
+    "sold_by": {
+      "type": "string"
+    },
     "price": {
       "type": "decimal"
+    },
+    "quantity": {
+      "type": "integer"
     }
   }
 }

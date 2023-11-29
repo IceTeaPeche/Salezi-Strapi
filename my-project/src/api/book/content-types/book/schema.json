@@ -18,11 +18,37 @@
     "description": {
       "type": "text"
     },
+    "author": {
+      "type": "string"
+    },
+    "picture": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "in stock",
+        "out of stock",
+        "on sale"
+      ],
+      "required": true
+    },
+    "sold_by": {
+      "type": "string"
+    },
     "price": {
       "type": "decimal"
     },
-    "author": {
-      "type": "string"
+    "quantity": {
+      "type": "integer"
     }
   }
 }

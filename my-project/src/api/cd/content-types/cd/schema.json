@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cd",
     "pluralName": "cds",
-    "displayName": "cd"
+    "displayName": "cd",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,8 +18,33 @@
     "description": {
       "type": "text"
     },
+    "picture": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sold_by": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "in stock",
+        "out of stock",
+        "on sale"
+      ]
+    },
     "price": {
       "type": "decimal"
+    },
+    "quantity": {
+      "type": "integer"
     }
   }
 }
