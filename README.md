@@ -48,6 +48,12 @@ installez GraphQL, entré cette commande dans le terminal : npm install @strapi/
 
 ## Configuration
 
+Pour accéder au panel, le mail et le mot de passe admin sont : ledoubleethan@gmail.com     /      Admin123
+
+Pour les utilsateurs déjà créer, pour le fnace manager c'est son mail + manager123
+
+pour les seller, c'est leur mail + Seller123
+
 Dans Strapi, vous pouvez cr&er des roles pour limiter des accès ou en accorder. Vous pouvez aussi créer votre base de donnée
 
 
@@ -56,6 +62,11 @@ Dans grafana, installer SQlite, puis allez dans le projet pour copier le chemin 
 
 
 Créer un dashbord puis ajouter votre base de donnée. Apres ça vous pouvez faire des requêtes SQL pour avoir un graph de vos données séléctionné
+
+
+## Base de donnée fournie
+
+Pour utiliser la base de donnée fourni, supprimer celle qu'il y a dans le dossier .tmp et mettez celui là à la place.
 
 
 ## documentation technique
