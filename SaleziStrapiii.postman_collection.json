@@ -1,0 +1,2959 @@
+{
+	"info": {
+		"_postman_id": "b852e927-8c87-40a7-b9d2-2f94bd4470dd",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30566124"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "get all product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query Books {\n    books {\n        data {\n            id\n            attributes {\n                name\n                description\n                author\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n    cds {\n        data {\n            id\n            attributes {\n                name\n                description\n                sold_by\n                status\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n    electronics {\n        data {\n            id\n            attributes {\n                name\n                description\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query Books {\n    books {\n        data {\n            id\n            attributes {\n                name\n                description\n                author\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n    cds {\n        data {\n            id\n            attributes {\n                name\n                description\n                sold_by\n                status\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n    electronics {\n        data {\n            id\n            attributes {\n                name\n                description\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "11947"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 16:30:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"books\": {\n            \"data\": [\n                {\n                    \"id\": \"1\",\n                    \"attributes\": {\n                        \"name\": \"le rouge et le noir\",\n                        \"description\": \"un pauvre qui veut devenir riche\",\n                        \"author\": \"standor\",\n                        \"status\": \"in_stock\",\n                        \"sold_by\": \"dreamwork\",\n                        \"price\": 13,\n                        \"quantity\": 0,\n                        \"createdAt\": \"2023-11-22T13:19:12.914Z\",\n                        \"updatedAt\": \"2023-11-28T21:22:39.982Z\",\n                        \"publishedAt\": \"2023-11-22T13:32:07.145Z\"\n                    }\n                },\n                {\n                    \"id\": \"2\",\n                    \"attributes\": {\n                        \"name\": \"Astérix le gaulois\",\n                        \"description\": \"c'est astérix qui est goulois et fiere de l'etre mais y a romain qui veulent pété les Gaulois\",\n                        \"author\": \"René Goscinny\",\n                        \"status\": \"on_sale\",\n                        \"sold_by\": \"dreamwork\",\n                        \"price\": 10,\n                        \"quantity\": 42,\n                        \"createdAt\": \"2023-11-23T15:34:49.920Z\",\n                        \"updatedAt\": \"2023-11-28T21:22:28.832Z\",\n                        \"publishedAt\": \"2023-11-23T15:34:57.140Z\"\n                    }\n                },\n                {\n                    \"id\": \"3\",\n                    \"attributes\": {\n                        \"name\": \"Le Monde sans fin, miracle énergétique et dérive climatique \",\n                        \"description\": \"La rencontre entre un auteur majeur de la bande dessinée et un éminent spécialiste des questions énergétiques et de l’impact sur le climat a abouti à ce projet, comme une évidence, une nécessité de témoigner sur des sujets qui nous concernent tous. Intelligent, limpide, non dénué d’humour, cet ouvrage explique sous forme de chapitres les changements profonds que notre planète vit actuellement et quelles conséquences, déjà observées, ces changements parfois radicaux signifient. Jean-Marc Jancovici étaye sa vision remarquablement argumentée en plaçant la question de l’énergie et du changement climatique au coeur de sa réflexion tout en évoquant les enjeux économiques (la course à la croissance à tout prix est-elle un leurre ?), écologiques et sociétaux. Ce témoignage éclairé s’avère précieux, passionnant et invite à la réflexion sur des sujets parfois clivants, notamment celui de la transition énergétique. Christophe Blain se place dans le rôle du candide, à la façon de son livre \\\"En cuisine avec Alain Passard\\\" et de \\\"Quai d’Orsay\\\" signé avec l’expertise d’un coauteur : un pavé de 120 pages indispensable pour mieux comprendre notre monde, tout simplement !\",\n                        \"author\": \"Jean marc Jancovici\",\n                        \"status\": \"out_of_stock\",\n                        \"sold_by\": \"Nature & Découvertes\",\n                        \"price\": 30,\n                        \"quantity\": 0,\n                        \"createdAt\": \"2023-11-29T09:01:45.305Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:08.453Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:08.451Z\"\n                    }\n                },\n                {\n                    \"id\": \"5\",\n                    \"attributes\": {\n                        \"name\": \"Mon livre nature tout en un\",\n                        \"description\": \"Une invitation à ne pas refuser : partir à la découverte des merveilles de la nature grâce à un livre aussi complet que beau, à conserver même une fois rempli !\\n\\nComment reconnaître un arbre à ses feuilles ? Les champignons poussent-ils aussi en été ? À quel animal appartiennent ces traces sur le sol ? Ce livre est une invitation à prendre le temps de regarder autour de soi lors des sorties et des jeux en plein air. Il y a tellement de choses fascinantes à découvrir – aussi bien en forêt, sur la plage ou dans le creux d’un fossé que dans le jardin !\\n\\nUne fois terminés la lecture et l’ensemble des activités rigolotes proposées, les enfants sauront comment les abeilles produisent le miel, quelle est la différence entre une grenouille et un crapaud, à quoi ressemble l’intérieur d’un œuf fécondé, et bien d’autres choses encore !\\n\\n \\nCe véritable « tout-en-un » de la nature relève le défi de s’appuyer sur des illustrations rétro pour dépoussiérer les sciences nat’ avec des coloriages, des jeux, des énigmes et des expériences !\",\n                        \"author\": \"Collectif\",\n                        \"status\": \"in_stock\",\n                        \"sold_by\": \"Nature & Découvertes\",\n                        \"price\": 16.95,\n                        \"quantity\": 5,\n                        \"createdAt\": \"2023-11-29T09:05:51.486Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:15.085Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:15.083Z\"\n                    }\n                },\n                {\n                    \"id\": \"7\",\n                    \"attributes\": {\n                        \"name\": \"Mickey junior magasine\",\n                        \"description\": \"Mickey Junior est LE magazine qui accompagne les enfants de 3 à 6 ans dans leurs années d’école maternelle.\",\n                        \"author\": \"disney\",\n                        \"status\": \"in_stock\",\n                        \"sold_by\": \"BilletReduc\",\n                        \"price\": 21,\n                        \"quantity\": 89,\n                        \"createdAt\": \"2023-11-29T09:07:52.183Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:11.771Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:11.769Z\"\n                    }\n                },\n                {\n                    \"id\": \"8\",\n                    \"attributes\": {\n                        \"name\": \" Le Grand livre de la nature. Toutes les richesses de notre planète Le Grand livre de la nature. Toutes les richesses de notre planète\",\n                        \"description\": \"Un panorama des richesses naturelles du monde à travers des illustrations légendées, des notions scientifiques expliquées et des conseils pratiques sur l'équipement du naturaliste, la prise de photographies et l'exploration du terrain.\",\n                        \"author\": \" Delachaux et Niestlé\",\n                        \"status\": \"on_sale\",\n                        \"sold_by\": \"Nature & Découvertes\",\n                        \"price\": 23,\n                        \"quantity\": 7,\n                        \"createdAt\": \"2023-11-29T09:08:19.548Z\",\n                        \"updatedAt\": \"2023-11-29T10:08:07.675Z\",\n                        \"publishedAt\": \"2023-11-29T10:08:07.674Z\"\n                    }\n                },\n                {\n                    \"id\": \"18\",\n                    \"attributes\": {\n                        \"name\": \"les Trolls\",\n                        \"description\": \"des petits Trolls\",\n                        \"author\": \"LE troll\",\n                        \"status\": \"on_sale\",\n                        \"sold_by\": \"francebillet\",\n                        \"price\": 13,\n                        \"quantity\": 10,\n                        \"createdAt\": \"2023-12-01T15:09:59.750Z\",\n                        \"updatedAt\": \"2023-12-01T15:10:23.070Z\",\n                        \"publishedAt\": \"2023-12-01T15:10:23.066Z\"\n                    }\n                }\n            ]\n        },\n        \"cds\": {\n            \"data\": [\n                {\n                    \"id\": \"1\",\n                    \"attributes\": {\n                        \"name\": \"shrek\",\n                        \"description\": \"shrek et l'ane avec fiona et le dragon\",\n                        \"sold_by\": \"dreamwork\",\n                        \"status\": \"on_sale\",\n                        \"price\": 9,\n                        \"quantity\": 81,\n                        \"createdAt\": \"2023-11-22T13:31:09.796Z\",\n                        \"updatedAt\": \"2023-11-28T21:12:50.098Z\",\n                        \"publishedAt\": \"2023-11-22T13:31:10.448Z\"\n                    }\n                },\n                {\n                    \"id\": \"2\",\n                    \"attributes\": {\n                        \"name\": \"dragon\",\n                        \"description\": \"y a plein de dragon\",\n                        \"sold_by\": \"Dreamwork\",\n                        \"status\": \"on_sale\",\n                        \"price\": 12,\n                        \"quantity\": 130,\n                        \"createdAt\": \"2023-11-22T14:00:29.198Z\",\n                        \"updatedAt\": \"2023-11-28T21:10:17.456Z\",\n                        \"publishedAt\": \"2023-11-22T14:02:11.401Z\"\n                    }\n                },\n                {\n                    \"id\": \"3\",\n                    \"attributes\": {\n                        \"name\": \"la guerre des télé\",\n                        \"description\": \"c'est la 4k oled qui se fight avec la télé des années 80, un peu comme batman vs superman ou encore iron man vs capitaine\",\n                        \"sold_by\": \"samsung\",\n                        \"status\": \"in_stock\",\n                        \"price\": 230,\n                        \"quantity\": 190,\n                        \"createdAt\": \"2023-11-29T08:33:42.656Z\",\n                        \"updatedAt\": \"2023-11-29T08:33:43.258Z\",\n                        \"publishedAt\": \"2023-11-29T08:33:43.256Z\"\n                    }\n                },\n                {\n                    \"id\": \"5\",\n                    \"attributes\": {\n                        \"name\": \"Le roi lion\",\n                        \"description\": \"c'est le lion qui devient roi mais il se fait counter par un autre lion\",\n                        \"sold_by\": \"BilletReduc\",\n                        \"status\": \"in_stock\",\n                        \"price\": 67,\n                        \"quantity\": 16,\n                        \"createdAt\": \"2023-11-29T08:58:12.120Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:50.553Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:50.552Z\"\n                    }\n                },\n                {\n                    \"id\": \"6\",\n                    \"attributes\": {\n                        \"name\": \"Super Mario Bros\",\n                        \"description\": \"mario mario mario\",\n                        \"sold_by\": \"BilletReduc\",\n                        \"status\": \"in_stock\",\n                        \"price\": 8,\n                        \"quantity\": 17,\n                        \"createdAt\": \"2023-11-29T09:01:09.444Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:53.040Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:53.037Z\"\n                    }\n                },\n                {\n                    \"id\": \"7\",\n                    \"attributes\": {\n                        \"name\": \"ceinture noir\",\n                        \"description\": \"album maitre gims\",\n                        \"sold_by\": \"francebillet\",\n                        \"status\": \"on_sale\",\n                        \"price\": 17,\n                        \"quantity\": 128,\n                        \"createdAt\": \"2023-11-29T09:19:30.905Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:55.686Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:55.685Z\"\n                    }\n                },\n                {\n                    \"id\": \"8\",\n                    \"attributes\": {\n                        \"name\": \"Faith pop smoke album\",\n                        \"description\": \"album pop smoke\",\n                        \"sold_by\": \"francebillet\",\n                        \"status\": \"on_sale\",\n                        \"price\": 89,\n                        \"quantity\": 612,\n                        \"createdAt\": \"2023-11-29T09:21:26.936Z\",\n                        \"updatedAt\": \"2023-11-29T10:11:31.328Z\",\n                        \"publishedAt\": \"2023-11-29T10:11:31.326Z\"\n                    }\n                },\n                {\n                    \"id\": \"9\",\n                    \"attributes\": {\n                        \"name\": \"feu album nekfeu\",\n                        \"description\": \"album nekfeu\",\n                        \"sold_by\": \"francebillet\",\n                        \"status\": \"on_sale\",\n                        \"price\": 13,\n                        \"quantity\": 721,\n                        \"createdAt\": \"2023-11-29T09:22:39.114Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:59.193Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:59.192Z\"\n                    }\n                }\n            ]\n        },\n        \"electronics\": {\n            \"data\": [\n                {\n                    \"id\": \"2\",\n                    \"attributes\": {\n                        \"name\": \"télé 4k 70 pouce\",\n                        \"description\": \"Le téléviseur Samsung 4K de 70 pouces offre une expérience visuelle immersive qui redéfinit votre manière de regarder la télévision. Avec une résolution ultra haute définition de 3840 x 2160 pixels, chaque détail prend vie sur l'écran généreux de 70 pouces, offrant une clarté cristalline et des couleurs éclatantes.\\n\\nGrâce à la technologie QLED de Samsung, les images prennent vie avec une intensité exceptionnelle. Les Quantum Dots garantissent une gamme de couleurs étendue et des contrastes profonds, tandis que la technologie HDR dynamique enrichit chaque scène en ajustant automatiquement la luminosité pour des noirs plus profonds et des blancs éblouissants.\\n\\nLe taux de rafraîchissement de 120 Hz assure une fluidité remarquable, idéale pour les amateurs de jeux vidéo et les passionnés de sport. Que vous soyez en train de jouer à des jeux rapides ou de regarder des événements sportifs en direct, le téléviseur offre une expérience visuelle exceptionnelle sans flou de mouvement.\\n\\nLe design élégant et épuré du téléviseur s'intègre harmonieusement à n'importe quel espace de vie. Les bords ultrafins maximisent la surface de l'écran, créant une esthétique moderne et immersive. En plus d'être un objet de design, ce téléviseur est une Smart TV intelligente, offrant un accès instantané à un éventail d'applications et de services de streaming. Naviguez facilement à l'aide de la télécommande intuitive ou utilisez la commande vocale pour un contrôle mains libres.\\n\\nDoté de multiples ports HDMI et USB, ce téléviseur offre une connectivité étendue, permettant de brancher facilement des consoles de jeu, des lecteurs Blu-ray et d'autres périphériques. Profitez de l'expérience audio immersive grâce au système audio intégré, offrant un son clair et puissant pour compléter la qualité d'image exceptionnelle.\",\n                        \"status\": \"on_sale\",\n                        \"sold_by\": \"Samsung\",\n                        \"price\": 1808.23,\n                        \"quantity\": 2,\n                        \"createdAt\": \"2023-11-28T09:38:45.446Z\",\n                        \"updatedAt\": \"2023-11-28T10:26:32.931Z\",\n                        \"publishedAt\": \"2023-11-28T09:44:23.899Z\"\n                    }\n                },\n                {\n                    \"id\": \"3\",\n                    \"attributes\": {\n                        \"name\": \"Galaxy Buds2 Pro\",\n                        \"description\": \"Son Hi-Fi détaillé avec double haut-parleurs\\nRéduction active de bruit optimisée\\nTechnologie Audio 360\\nDesign élégant & ergonomique\\nAutonomie jusqu’à 29h\",\n                        \"status\": \"out_of_stock\",\n                        \"sold_by\": \"samsung\",\n                        \"price\": 200,\n                        \"quantity\": 30,\n                        \"createdAt\": \"2023-11-28T09:43:56.584Z\",\n                        \"updatedAt\": \"2023-11-28T10:26:10.180Z\",\n                        \"publishedAt\": \"2023-11-28T09:44:20.761Z\"\n                    }\n                },\n                {\n                    \"id\": \"4\",\n                    \"attributes\": {\n                        \"name\": \"Galaxy Tab S9 Ultra\",\n                        \"description\": \"Galaxy Tab S9 Ultra convient a tout le monde parce qu'elle est grande et légère. Sans oublier le stylé vendu. séparément pour la maudite somme de 149 euros pour faire revivre vos talent sans doute inné en dessin \",\n                        \"status\": \"in_stock\",\n                        \"sold_by\": \"samsung\",\n                        \"price\": 700,\n                        \"quantity\": 25,\n                        \"createdAt\": \"2023-11-28T20:38:46.745Z\",\n                        \"updatedAt\": \"2023-11-28T20:59:01.174Z\",\n                        \"publishedAt\": \"2023-11-28T20:59:01.173Z\"\n                    }\n                },\n                {\n                    \"id\": \"7\",\n                    \"attributes\": {\n                        \"name\": \"INFOMAX | PC Gamer, Ordinateur de Bureau, PC Gaming - \",\n                        \"description\": \"Processeur Intel Core i5-12400F • NVIDIA RTX 4060 8 GO • RAM 16 GO RGB • SSD 1 to • WiFi • BOÎTIER ARGB • Watercooling • FREEOS \",\n                        \"status\": \"in_stock\",\n                        \"sold_by\": \"PC.CLINIC\",\n                        \"price\": 2000,\n                        \"quantity\": 1,\n                        \"createdAt\": \"2023-11-29T09:20:20.754Z\",\n                        \"updatedAt\": \"2023-11-29T10:11:49.521Z\",\n                        \"publishedAt\": \"2023-11-29T10:11:49.520Z\"\n                    }\n                },\n                {\n                    \"id\": \"8\",\n                    \"attributes\": {\n                        \"name\": \"pc gamer léviathan\",\n                        \"description\": \"\\n\\nNVIDIA RTX 4090 24Go - Intel i9-13900K - 32Go Ram DDR5 - 1To SSD NVMe PCIe 4.0 - Asus ROG Z790 Maximus Hero - Watercooling AIO 360 - Boitier Cooler Master HAF 700 Evo - Windows 10 Pro\\n\\nCette configuration inédite est un monstre de puissance qui regroupe les composants les plus performants qui existent à l'heure actuel :\\n\\n    RTX 4090 24Go, la carte graphique la plus puissante de sa série\\n    Intel i9-13900K, le processeur aux fréquences démoniaques\\n    ASUS ROG Ryuo III 360 , le meilleur Watercooling pour les processeurs puissants.\\n    Asus ROG Z790 Maximus Hero, la carte mère qui booste les processeurs Intel 12th\\n    Ram Dominator DDR5 de Corsair, équipée des meilleures Nand du marché\\n    SSD Samsung 990 Pro, le plus rapide et le plus fiable\\n\\n\",\n                        \"status\": \"out_of_stock\",\n                        \"sold_by\": \"PC.CLINIC\",\n                        \"price\": 3000,\n                        \"quantity\": 0,\n                        \"createdAt\": \"2023-11-29T09:22:34.051Z\",\n                        \"updatedAt\": \"2023-12-01T08:49:05.835Z\",\n                        \"publishedAt\": \"2023-12-01T08:49:05.833Z\"\n                    }\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get books product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query Books {\n    books {\n        data {\n            id\n            attributes {\n                name\n                description\n                author\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get books product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query Books {\n    books {\n        data {\n            id\n            attributes {\n                name\n                description\n                author\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5034"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 16:31:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"books\": {\n            \"data\": [\n                {\n                    \"id\": \"1\",\n                    \"attributes\": {\n                        \"name\": \"le rouge et le noir\",\n                        \"description\": \"un pauvre qui veut devenir riche\",\n                        \"author\": \"standor\",\n                        \"status\": \"in_stock\",\n                        \"sold_by\": \"dreamwork\",\n                        \"price\": 13,\n                        \"quantity\": 0,\n                        \"createdAt\": \"2023-11-22T13:19:12.914Z\",\n                        \"updatedAt\": \"2023-11-28T21:22:39.982Z\",\n                        \"publishedAt\": \"2023-11-22T13:32:07.145Z\"\n                    }\n                },\n                {\n                    \"id\": \"2\",\n                    \"attributes\": {\n                        \"name\": \"Astérix le gaulois\",\n                        \"description\": \"c'est astérix qui est goulois et fiere de l'etre mais y a romain qui veulent pété les Gaulois\",\n                        \"author\": \"René Goscinny\",\n                        \"status\": \"on_sale\",\n                        \"sold_by\": \"dreamwork\",\n                        \"price\": 10,\n                        \"quantity\": 42,\n                        \"createdAt\": \"2023-11-23T15:34:49.920Z\",\n                        \"updatedAt\": \"2023-11-28T21:22:28.832Z\",\n                        \"publishedAt\": \"2023-11-23T15:34:57.140Z\"\n                    }\n                },\n                {\n                    \"id\": \"3\",\n                    \"attributes\": {\n                        \"name\": \"Le Monde sans fin, miracle énergétique et dérive climatique \",\n                        \"description\": \"La rencontre entre un auteur majeur de la bande dessinée et un éminent spécialiste des questions énergétiques et de l’impact sur le climat a abouti à ce projet, comme une évidence, une nécessité de témoigner sur des sujets qui nous concernent tous. Intelligent, limpide, non dénué d’humour, cet ouvrage explique sous forme de chapitres les changements profonds que notre planète vit actuellement et quelles conséquences, déjà observées, ces changements parfois radicaux signifient. Jean-Marc Jancovici étaye sa vision remarquablement argumentée en plaçant la question de l’énergie et du changement climatique au coeur de sa réflexion tout en évoquant les enjeux économiques (la course à la croissance à tout prix est-elle un leurre ?), écologiques et sociétaux. Ce témoignage éclairé s’avère précieux, passionnant et invite à la réflexion sur des sujets parfois clivants, notamment celui de la transition énergétique. Christophe Blain se place dans le rôle du candide, à la façon de son livre \\\"En cuisine avec Alain Passard\\\" et de \\\"Quai d’Orsay\\\" signé avec l’expertise d’un coauteur : un pavé de 120 pages indispensable pour mieux comprendre notre monde, tout simplement !\",\n                        \"author\": \"Jean marc Jancovici\",\n                        \"status\": \"out_of_stock\",\n                        \"sold_by\": \"Nature & Découvertes\",\n                        \"price\": 30,\n                        \"quantity\": 0,\n                        \"createdAt\": \"2023-11-29T09:01:45.305Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:08.453Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:08.451Z\"\n                    }\n                },\n                {\n                    \"id\": \"5\",\n                    \"attributes\": {\n                        \"name\": \"Mon livre nature tout en un\",\n                        \"description\": \"Une invitation à ne pas refuser : partir à la découverte des merveilles de la nature grâce à un livre aussi complet que beau, à conserver même une fois rempli !\\n\\nComment reconnaître un arbre à ses feuilles ? Les champignons poussent-ils aussi en été ? À quel animal appartiennent ces traces sur le sol ? Ce livre est une invitation à prendre le temps de regarder autour de soi lors des sorties et des jeux en plein air. Il y a tellement de choses fascinantes à découvrir – aussi bien en forêt, sur la plage ou dans le creux d’un fossé que dans le jardin !\\n\\nUne fois terminés la lecture et l’ensemble des activités rigolotes proposées, les enfants sauront comment les abeilles produisent le miel, quelle est la différence entre une grenouille et un crapaud, à quoi ressemble l’intérieur d’un œuf fécondé, et bien d’autres choses encore !\\n\\n \\nCe véritable « tout-en-un » de la nature relève le défi de s’appuyer sur des illustrations rétro pour dépoussiérer les sciences nat’ avec des coloriages, des jeux, des énigmes et des expériences !\",\n                        \"author\": \"Collectif\",\n                        \"status\": \"in_stock\",\n                        \"sold_by\": \"Nature & Découvertes\",\n                        \"price\": 16.95,\n                        \"quantity\": 5,\n                        \"createdAt\": \"2023-11-29T09:05:51.486Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:15.085Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:15.083Z\"\n                    }\n                },\n                {\n                    \"id\": \"7\",\n                    \"attributes\": {\n                        \"name\": \"Mickey junior magasine\",\n                        \"description\": \"Mickey Junior est LE magazine qui accompagne les enfants de 3 à 6 ans dans leurs années d’école maternelle.\",\n                        \"author\": \"disney\",\n                        \"status\": \"in_stock\",\n                        \"sold_by\": \"BilletReduc\",\n                        \"price\": 21,\n                        \"quantity\": 89,\n                        \"createdAt\": \"2023-11-29T09:07:52.183Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:11.771Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:11.769Z\"\n                    }\n                },\n                {\n                    \"id\": \"8\",\n                    \"attributes\": {\n                        \"name\": \" Le Grand livre de la nature. Toutes les richesses de notre planète Le Grand livre de la nature. Toutes les richesses de notre planète\",\n                        \"description\": \"Un panorama des richesses naturelles du monde à travers des illustrations légendées, des notions scientifiques expliquées et des conseils pratiques sur l'équipement du naturaliste, la prise de photographies et l'exploration du terrain.\",\n                        \"author\": \" Delachaux et Niestlé\",\n                        \"status\": \"on_sale\",\n                        \"sold_by\": \"Nature & Découvertes\",\n                        \"price\": 23,\n                        \"quantity\": 7,\n                        \"createdAt\": \"2023-11-29T09:08:19.548Z\",\n                        \"updatedAt\": \"2023-11-29T10:08:07.675Z\",\n                        \"publishedAt\": \"2023-11-29T10:08:07.674Z\"\n                    }\n                },\n                {\n                    \"id\": \"18\",\n                    \"attributes\": {\n                        \"name\": \"les Trolls\",\n                        \"description\": \"des petits Trolls\",\n                        \"author\": \"LE troll\",\n                        \"status\": \"on_sale\",\n                        \"sold_by\": \"francebillet\",\n                        \"price\": 13,\n                        \"quantity\": 10,\n                        \"createdAt\": \"2023-12-01T15:09:59.750Z\",\n                        \"updatedAt\": \"2023-12-01T15:10:23.070Z\",\n                        \"publishedAt\": \"2023-12-01T15:10:23.066Z\"\n                    }\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get cds product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query Cds {\n    cds {\n        data {\n            id\n            attributes {\n                name\n                description\n                sold_by\n                status\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get cds product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query Cds {\n    cds {\n        data {\n            id\n            attributes {\n                name\n                description\n                sold_by\n                status\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2371"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 16:31:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"cds\": {\n            \"data\": [\n                {\n                    \"id\": \"1\",\n                    \"attributes\": {\n                        \"name\": \"shrek\",\n                        \"description\": \"shrek et l'ane avec fiona et le dragon\",\n                        \"sold_by\": \"dreamwork\",\n                        \"status\": \"on_sale\",\n                        \"price\": 9,\n                        \"quantity\": 81,\n                        \"createdAt\": \"2023-11-22T13:31:09.796Z\",\n                        \"updatedAt\": \"2023-11-28T21:12:50.098Z\",\n                        \"publishedAt\": \"2023-11-22T13:31:10.448Z\"\n                    }\n                },\n                {\n                    \"id\": \"2\",\n                    \"attributes\": {\n                        \"name\": \"dragon\",\n                        \"description\": \"y a plein de dragon\",\n                        \"sold_by\": \"Dreamwork\",\n                        \"status\": \"on_sale\",\n                        \"price\": 12,\n                        \"quantity\": 130,\n                        \"createdAt\": \"2023-11-22T14:00:29.198Z\",\n                        \"updatedAt\": \"2023-11-28T21:10:17.456Z\",\n                        \"publishedAt\": \"2023-11-22T14:02:11.401Z\"\n                    }\n                },\n                {\n                    \"id\": \"3\",\n                    \"attributes\": {\n                        \"name\": \"la guerre des télé\",\n                        \"description\": \"c'est la 4k oled qui se fight avec la télé des années 80, un peu comme batman vs superman ou encore iron man vs capitaine\",\n                        \"sold_by\": \"samsung\",\n                        \"status\": \"in_stock\",\n                        \"price\": 230,\n                        \"quantity\": 190,\n                        \"createdAt\": \"2023-11-29T08:33:42.656Z\",\n                        \"updatedAt\": \"2023-11-29T08:33:43.258Z\",\n                        \"publishedAt\": \"2023-11-29T08:33:43.256Z\"\n                    }\n                },\n                {\n                    \"id\": \"5\",\n                    \"attributes\": {\n                        \"name\": \"Le roi lion\",\n                        \"description\": \"c'est le lion qui devient roi mais il se fait counter par un autre lion\",\n                        \"sold_by\": \"BilletReduc\",\n                        \"status\": \"in_stock\",\n                        \"price\": 67,\n                        \"quantity\": 16,\n                        \"createdAt\": \"2023-11-29T08:58:12.120Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:50.553Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:50.552Z\"\n                    }\n                },\n                {\n                    \"id\": \"6\",\n                    \"attributes\": {\n                        \"name\": \"Super Mario Bros\",\n                        \"description\": \"mario mario mario\",\n                        \"sold_by\": \"BilletReduc\",\n                        \"status\": \"in_stock\",\n                        \"price\": 8,\n                        \"quantity\": 17,\n                        \"createdAt\": \"2023-11-29T09:01:09.444Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:53.040Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:53.037Z\"\n                    }\n                },\n                {\n                    \"id\": \"7\",\n                    \"attributes\": {\n                        \"name\": \"ceinture noir\",\n                        \"description\": \"album maitre gims\",\n                        \"sold_by\": \"francebillet\",\n                        \"status\": \"on_sale\",\n                        \"price\": 17,\n                        \"quantity\": 128,\n                        \"createdAt\": \"2023-11-29T09:19:30.905Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:55.686Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:55.685Z\"\n                    }\n                },\n                {\n                    \"id\": \"8\",\n                    \"attributes\": {\n                        \"name\": \"Faith pop smoke album\",\n                        \"description\": \"album pop smoke\",\n                        \"sold_by\": \"francebillet\",\n                        \"status\": \"on_sale\",\n                        \"price\": 89,\n                        \"quantity\": 612,\n                        \"createdAt\": \"2023-11-29T09:21:26.936Z\",\n                        \"updatedAt\": \"2023-11-29T10:11:31.328Z\",\n                        \"publishedAt\": \"2023-11-29T10:11:31.326Z\"\n                    }\n                },\n                {\n                    \"id\": \"9\",\n                    \"attributes\": {\n                        \"name\": \"feu album nekfeu\",\n                        \"description\": \"album nekfeu\",\n                        \"sold_by\": \"francebillet\",\n                        \"status\": \"on_sale\",\n                        \"price\": 13,\n                        \"quantity\": 721,\n                        \"createdAt\": \"2023-11-29T09:22:39.114Z\",\n                        \"updatedAt\": \"2023-12-01T08:47:59.193Z\",\n                        \"publishedAt\": \"2023-12-01T08:47:59.192Z\"\n                    }\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get electronics product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query Electronics {\n    electronics {\n        data {\n            id\n            attributes {\n                name\n                description\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get electronics product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query Electronics {\n    electronics {\n        data {\n            id\n            attributes {\n                name\n                description\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4564"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 16:31:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"electronics\": {\n            \"data\": [\n                {\n                    \"id\": \"2\",\n                    \"attributes\": {\n                        \"name\": \"télé 4k 70 pouce\",\n                        \"description\": \"Le téléviseur Samsung 4K de 70 pouces offre une expérience visuelle immersive qui redéfinit votre manière de regarder la télévision. Avec une résolution ultra haute définition de 3840 x 2160 pixels, chaque détail prend vie sur l'écran généreux de 70 pouces, offrant une clarté cristalline et des couleurs éclatantes.\\n\\nGrâce à la technologie QLED de Samsung, les images prennent vie avec une intensité exceptionnelle. Les Quantum Dots garantissent une gamme de couleurs étendue et des contrastes profonds, tandis que la technologie HDR dynamique enrichit chaque scène en ajustant automatiquement la luminosité pour des noirs plus profonds et des blancs éblouissants.\\n\\nLe taux de rafraîchissement de 120 Hz assure une fluidité remarquable, idéale pour les amateurs de jeux vidéo et les passionnés de sport. Que vous soyez en train de jouer à des jeux rapides ou de regarder des événements sportifs en direct, le téléviseur offre une expérience visuelle exceptionnelle sans flou de mouvement.\\n\\nLe design élégant et épuré du téléviseur s'intègre harmonieusement à n'importe quel espace de vie. Les bords ultrafins maximisent la surface de l'écran, créant une esthétique moderne et immersive. En plus d'être un objet de design, ce téléviseur est une Smart TV intelligente, offrant un accès instantané à un éventail d'applications et de services de streaming. Naviguez facilement à l'aide de la télécommande intuitive ou utilisez la commande vocale pour un contrôle mains libres.\\n\\nDoté de multiples ports HDMI et USB, ce téléviseur offre une connectivité étendue, permettant de brancher facilement des consoles de jeu, des lecteurs Blu-ray et d'autres périphériques. Profitez de l'expérience audio immersive grâce au système audio intégré, offrant un son clair et puissant pour compléter la qualité d'image exceptionnelle.\",\n                        \"status\": \"on_sale\",\n                        \"sold_by\": \"Samsung\",\n                        \"price\": 1808.23,\n                        \"quantity\": 2,\n                        \"createdAt\": \"2023-11-28T09:38:45.446Z\",\n                        \"updatedAt\": \"2023-11-28T10:26:32.931Z\",\n                        \"publishedAt\": \"2023-11-28T09:44:23.899Z\"\n                    }\n                },\n                {\n                    \"id\": \"3\",\n                    \"attributes\": {\n                        \"name\": \"Galaxy Buds2 Pro\",\n                        \"description\": \"Son Hi-Fi détaillé avec double haut-parleurs\\nRéduction active de bruit optimisée\\nTechnologie Audio 360\\nDesign élégant & ergonomique\\nAutonomie jusqu’à 29h\",\n                        \"status\": \"out_of_stock\",\n                        \"sold_by\": \"samsung\",\n                        \"price\": 200,\n                        \"quantity\": 30,\n                        \"createdAt\": \"2023-11-28T09:43:56.584Z\",\n                        \"updatedAt\": \"2023-11-28T10:26:10.180Z\",\n                        \"publishedAt\": \"2023-11-28T09:44:20.761Z\"\n                    }\n                },\n                {\n                    \"id\": \"4\",\n                    \"attributes\": {\n                        \"name\": \"Galaxy Tab S9 Ultra\",\n                        \"description\": \"Galaxy Tab S9 Ultra convient a tout le monde parce qu'elle est grande et légère. Sans oublier le stylé vendu. séparément pour la maudite somme de 149 euros pour faire revivre vos talent sans doute inné en dessin \",\n                        \"status\": \"in_stock\",\n                        \"sold_by\": \"samsung\",\n                        \"price\": 700,\n                        \"quantity\": 25,\n                        \"createdAt\": \"2023-11-28T20:38:46.745Z\",\n                        \"updatedAt\": \"2023-11-28T20:59:01.174Z\",\n                        \"publishedAt\": \"2023-11-28T20:59:01.173Z\"\n                    }\n                },\n                {\n                    \"id\": \"7\",\n                    \"attributes\": {\n                        \"name\": \"INFOMAX | PC Gamer, Ordinateur de Bureau, PC Gaming - \",\n                        \"description\": \"Processeur Intel Core i5-12400F • NVIDIA RTX 4060 8 GO • RAM 16 GO RGB • SSD 1 to • WiFi • BOÎTIER ARGB • Watercooling • FREEOS \",\n                        \"status\": \"in_stock\",\n                        \"sold_by\": \"PC.CLINIC\",\n                        \"price\": 2000,\n                        \"quantity\": 1,\n                        \"createdAt\": \"2023-11-29T09:20:20.754Z\",\n                        \"updatedAt\": \"2023-11-29T10:11:49.521Z\",\n                        \"publishedAt\": \"2023-11-29T10:11:49.520Z\"\n                    }\n                },\n                {\n                    \"id\": \"8\",\n                    \"attributes\": {\n                        \"name\": \"pc gamer léviathan\",\n                        \"description\": \"\\n\\nNVIDIA RTX 4090 24Go - Intel i9-13900K - 32Go Ram DDR5 - 1To SSD NVMe PCIe 4.0 - Asus ROG Z790 Maximus Hero - Watercooling AIO 360 - Boitier Cooler Master HAF 700 Evo - Windows 10 Pro\\n\\nCette configuration inédite est un monstre de puissance qui regroupe les composants les plus performants qui existent à l'heure actuel :\\n\\n    RTX 4090 24Go, la carte graphique la plus puissante de sa série\\n    Intel i9-13900K, le processeur aux fréquences démoniaques\\n    ASUS ROG Ryuo III 360 , le meilleur Watercooling pour les processeurs puissants.\\n    Asus ROG Z790 Maximus Hero, la carte mère qui booste les processeurs Intel 12th\\n    Ram Dominator DDR5 de Corsair, équipée des meilleures Nand du marché\\n    SSD Samsung 990 Pro, le plus rapide et le plus fiable\\n\\n\",\n                        \"status\": \"out_of_stock\",\n                        \"sold_by\": \"PC.CLINIC\",\n                        \"price\": 3000,\n                        \"quantity\": 0,\n                        \"createdAt\": \"2023-11-29T09:22:34.051Z\",\n                        \"updatedAt\": \"2023-12-01T08:49:05.835Z\",\n                        \"publishedAt\": \"2023-12-01T08:49:05.833Z\"\n                    }\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get electronics per id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query Electronics($id: ID!) {\n    electronic(id: $id) {\n        data {\n            id\n            attributes {\n                name\n                description\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+								"variables": "{\n  \"id\": \"2\"\n}\n"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get electronics per id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query Electronics($id: ID!) {\n    electronic(id: $id) {\n        data {\n            id\n            attributes {\n                name\n                description\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+										"variables": "{\n  \"id\": \"2\"\n}\n"
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2184"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 16:31:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"electronic\": {\n            \"data\": {\n                \"id\": \"2\",\n                \"attributes\": {\n                    \"name\": \"télé 4k 70 pouce\",\n                    \"description\": \"Le téléviseur Samsung 4K de 70 pouces offre une expérience visuelle immersive qui redéfinit votre manière de regarder la télévision. Avec une résolution ultra haute définition de 3840 x 2160 pixels, chaque détail prend vie sur l'écran généreux de 70 pouces, offrant une clarté cristalline et des couleurs éclatantes.\\n\\nGrâce à la technologie QLED de Samsung, les images prennent vie avec une intensité exceptionnelle. Les Quantum Dots garantissent une gamme de couleurs étendue et des contrastes profonds, tandis que la technologie HDR dynamique enrichit chaque scène en ajustant automatiquement la luminosité pour des noirs plus profonds et des blancs éblouissants.\\n\\nLe taux de rafraîchissement de 120 Hz assure une fluidité remarquable, idéale pour les amateurs de jeux vidéo et les passionnés de sport. Que vous soyez en train de jouer à des jeux rapides ou de regarder des événements sportifs en direct, le téléviseur offre une expérience visuelle exceptionnelle sans flou de mouvement.\\n\\nLe design élégant et épuré du téléviseur s'intègre harmonieusement à n'importe quel espace de vie. Les bords ultrafins maximisent la surface de l'écran, créant une esthétique moderne et immersive. En plus d'être un objet de design, ce téléviseur est une Smart TV intelligente, offrant un accès instantané à un éventail d'applications et de services de streaming. Naviguez facilement à l'aide de la télécommande intuitive ou utilisez la commande vocale pour un contrôle mains libres.\\n\\nDoté de multiples ports HDMI et USB, ce téléviseur offre une connectivité étendue, permettant de brancher facilement des consoles de jeu, des lecteurs Blu-ray et d'autres périphériques. Profitez de l'expérience audio immersive grâce au système audio intégré, offrant un son clair et puissant pour compléter la qualité d'image exceptionnelle.\",\n                    \"status\": \"on_sale\",\n                    \"sold_by\": \"Samsung\",\n                    \"price\": 1808.23,\n                    \"quantity\": 2,\n                    \"createdAt\": \"2023-11-28T09:38:45.446Z\",\n                    \"updatedAt\": \"2023-11-28T10:26:32.931Z\",\n                    \"publishedAt\": \"2023-11-28T09:44:23.899Z\"\n                }\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get books per  id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query Books($id: ID!) {\n    book(id: $id) {\n        data {\n            id\n            attributes {\n                name\n                description\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+								"variables": "{\n    \"id\": \"1\"\n}"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get books per  id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query Books($id: ID!) {\n    book(id: $id) {\n        data {\n            id\n            attributes {\n                name\n                description\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+										"variables": "{\n    \"id\": \"1\"\n}"
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "316"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 16:31:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"book\": {\n            \"data\": {\n                \"id\": \"1\",\n                \"attributes\": {\n                    \"name\": \"le rouge et le noir\",\n                    \"description\": \"un pauvre qui veut devenir riche\",\n                    \"status\": \"in_stock\",\n                    \"sold_by\": \"dreamwork\",\n                    \"price\": 13,\n                    \"quantity\": 0,\n                    \"createdAt\": \"2023-11-22T13:19:12.914Z\",\n                    \"updatedAt\": \"2023-11-28T21:22:39.982Z\",\n                    \"publishedAt\": \"2023-11-22T13:32:07.145Z\"\n                }\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get cds per id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query Cds($id: ID!) {\n    cd(id: $id) {\n        data {\n            id\n            attributes {\n                name\n                description\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+								"variables": "{\n    \"id\":\"1\"\n}"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get cds per id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query Cds($id: ID!) {\n    cd(id: $id) {\n        data {\n            id\n            attributes {\n                name\n                description\n                status\n                sold_by\n                price\n                quantity\n                createdAt\n                updatedAt\n                publishedAt\n            }\n        }\n    }\n}\n",
+										"variables": "{\n    \"id\":\"1\"\n}"
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/graphql",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"graphql"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "305"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 16:31:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"cd\": {\n            \"data\": {\n                \"id\": \"1\",\n                \"attributes\": {\n                    \"name\": \"shrek\",\n                    \"description\": \"shrek et l'ane avec fiona et le dragon\",\n                    \"status\": \"on_sale\",\n                    \"sold_by\": \"dreamwork\",\n                    \"price\": 9,\n                    \"quantity\": 81,\n                    \"createdAt\": \"2023-11-22T13:31:09.796Z\",\n                    \"updatedAt\": \"2023-11-28T21:12:50.098Z\",\n                    \"publishedAt\": \"2023-11-22T13:31:10.448Z\"\n                }\n            }\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "créer book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzAxNDM4NzQ1LCJleHAiOjE3MDQwMzA3NDV9.fA7_STdtYZovipafrAVL0m5w1uB7JGMKwmL7dbyez9U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"le grand prince\",\n  \"description\": \"c'est un grand prince\",\n  \"author\": \"nathana\",\n  \"status\": \"on sale\",\n  \"price\": 230,\n  \"sold_by\": \"dreamwork\",\n  \"quantity\": 40\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::book.book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::book.book"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "créer book",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"le grand prince\",\n  \"description\": \"c'est un grand prince\",\n  \"author\": \"nathana\",\n  \"status\": \"on sale\",\n  \"price\": 230,\n  \"sold_by\": \"dreamwork\",\n  \"quantity\": 40\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::book.book",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::book.book"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "428"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 14:46:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 17,\n    \"name\": \"le grand prince\",\n    \"description\": \"c'est un grand prince\",\n    \"price\": 230,\n    \"createdAt\": \"2023-12-01T14:46:16.089Z\",\n    \"updatedAt\": \"2023-12-01T14:46:16.089Z\",\n    \"publishedAt\": null,\n    \"author\": \"nathana\",\n    \"status\": \"on sale\",\n    \"sold_by\": \"dreamwork\",\n    \"quantity\": 40,\n    \"picture\": null,\n    \"createdBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    },\n    \"updatedBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "créer cd",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzAxNDM4NzQ1LCJleHAiOjE3MDQwMzA3NDV9.fA7_STdtYZovipafrAVL0m5w1uB7JGMKwmL7dbyez9U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Shrek 2\",\n  \"description\": \"Shrek 2 c'est comme le 1 mais en mieux\",\n  \"status\": \"on sale\",\n  \"price\": 10,\n  \"sold_by\": \"dreamwork\",\n  \"quantity\": 148\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::cd.cd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::cd.cd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "créer cd",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Shrek 2\",\n  \"description\": \"Shrek 2 c'est comme le 1 mais en mieux\",\n  \"status\": \"on sale\",\n  \"price\": 10,\n  \"sold_by\": \"dreamwork\",\n  \"quantity\": 148\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::cd.cd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::cd.cd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "418"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 14:15:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 11,\n    \"name\": \"Shrek 2\",\n    \"description\": \"Shrek 2 c'est comme le 1 mais en mieux\",\n    \"price\": 10,\n    \"createdAt\": \"2023-12-01T14:15:27.538Z\",\n    \"updatedAt\": \"2023-12-01T14:15:27.538Z\",\n    \"publishedAt\": null,\n    \"sold_by\": \"dreamwork\",\n    \"status\": \"on sale\",\n    \"quantity\": 148,\n    \"picture\": null,\n    \"createdBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    },\n    \"updatedBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "créer electronic",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzAxNDM4NzQ1LCJleHAiOjE3MDQwMzA3NDV9.fA7_STdtYZovipafrAVL0m5w1uB7JGMKwmL7dbyez9U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"apple watch\",\n  \"description\": \"c'est une montre connécté\",\n  \"status\": \"on sale\",\n  \"price\": 698,\n  \"sold_by\": \"dreamwork\",\n  \"quantity\": 83\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::electronic.electronic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::electronic.electronic"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "créer electronic",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"apple watch\",\n  \"description\": \"c'est une montre connécté\",\n  \"status\": \"on sale\",\n  \"price\": 698,\n  \"sold_by\": \"dreamwork\",\n  \"quantity\": 83\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::electronic.electronic",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::electronic.electronic"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "410"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 14:09:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9,\n    \"name\": \"apple watch\",\n    \"description\": \"c'est une montre connécté\",\n    \"createdAt\": \"2023-12-01T14:09:45.753Z\",\n    \"updatedAt\": \"2023-12-01T14:09:45.753Z\",\n    \"publishedAt\": null,\n    \"status\": \"on sale\",\n    \"sold_by\": \"dreamwork\",\n    \"price\": 698,\n    \"quantity\": 83,\n    \"picture\": null,\n    \"createdBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    },\n    \"updatedBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "modifier un book avec l'id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzAxNDQxMjc4LCJleHAiOjE3MDQwMzMyNzh9.FDLgTETfAq1XZ-V8ft9bCU5kyWnwkWJdle797WDIZ8I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 16,\n  \"name\": \"lo potit chat\",\n  \"description\": \"qui court dans la maison\",\n  \"price\": 1,\n  \"createdAt\": \"2023-12-01T14:35:43.995Z\",\n  \"updatedAt\": \"2023-12-01T14:35:43.995Z\",\n  \"publishedAt\": null,\n  \"author\": \"je ne sais pas \",\n  \"status\": \"on sale\",\n  \"sold_by\": \"le chat.fr\",\n  \"quantity\": 29,\n  \"picture\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::book.book/16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::book.book",
+								"16"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "modifier un book avec l'id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 16,\n  \"name\": \"lo potit chat\",\n  \"description\": \"qui court dans la maison\",\n  \"price\": 1,\n  \"createdAt\": \"2023-12-01T14:35:43.995Z\",\n  \"updatedAt\": \"2023-12-01T14:35:43.995Z\",\n  \"publishedAt\": null,\n  \"author\": \"je ne sais pas \",\n  \"status\": \"on sale\",\n  \"sold_by\": \"le chat.fr\",\n  \"quantity\": 29,\n  \"picture\": null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::book.book/16",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::book.book",
+										"16"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "436"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 14:39:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 16,\n    \"name\": \"lo potit chat\",\n    \"description\": \"qui court dans la maison\",\n    \"price\": 1,\n    \"createdAt\": \"2023-12-01T14:35:43.995Z\",\n    \"updatedAt\": \"2023-12-01T14:39:11.583Z\",\n    \"publishedAt\": null,\n    \"author\": \"je ne sais pas \",\n    \"status\": \"on sale\",\n    \"sold_by\": \"le chat.fr\",\n    \"quantity\": 29,\n    \"picture\": null,\n    \"createdBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    },\n    \"updatedBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "modifier un cd avec l'id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzAxNDQxMjc4LCJleHAiOjE3MDQwMzMyNzh9.FDLgTETfAq1XZ-V8ft9bCU5kyWnwkWJdle797WDIZ8I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 11,\n  \"name\": \"shrek 34\",\n  \"description\": \"il y a 34 shrek\",\n  \"price\": 34,\n  \"createdAt\": \"2023-12-01T14:35:43.995Z\",\n  \"updatedAt\": \"2023-12-01T14:35:43.995Z\",\n  \"publishedAt\": null,\n  \"status\": \"out of stock\",\n  \"sold_by\": \"shrek.fr\",\n  \"quantity\": 34,\n  \"picture\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::cd.cd/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::cd.cd",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "modifier un cd avec l'id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 11,\n  \"name\": \"shrek 34\",\n  \"description\": \"il y a 34 shrek\",\n  \"price\": 34,\n  \"createdAt\": \"2023-12-01T14:35:43.995Z\",\n  \"updatedAt\": \"2023-12-01T14:35:43.995Z\",\n  \"publishedAt\": null,\n  \"status\": \"out of stock\",\n  \"sold_by\": \"shrek.fr\",\n  \"quantity\": 34,\n  \"picture\": null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::cd.cd/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::cd.cd",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "399"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 14:43:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 11,\n    \"name\": \"shrek 34\",\n    \"description\": \"il y a 34 shrek\",\n    \"price\": 34,\n    \"createdAt\": \"2023-12-01T14:15:27.538Z\",\n    \"updatedAt\": \"2023-12-01T14:43:09.115Z\",\n    \"publishedAt\": null,\n    \"sold_by\": \"shrek.fr\",\n    \"status\": \"out of stock\",\n    \"quantity\": 34,\n    \"picture\": null,\n    \"createdBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    },\n    \"updatedBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "modifier un electronic avec l'id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzAxNDQxMjc4LCJleHAiOjE3MDQwMzMyNzh9.FDLgTETfAq1XZ-V8ft9bCU5kyWnwkWJdle797WDIZ8I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 9,\n  \"name\": \"macbook pro\",\n  \"description\": \"16 pouce 32go ram\",\n  \"price\": 3200,\n  \"createdAt\": \"2023-12-01T14:35:43.995Z\",\n  \"updatedAt\": \"2023-12-01T14:35:43.995Z\",\n  \"publishedAt\": null,\n  \"status\": \"on sale\",\n  \"sold_by\": \"apple\",\n  \"quantity\": 130,\n  \"picture\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::electronic.electronic/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::electronic.electronic",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "modifier un electronic avec l'id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 9,\n  \"name\": \"macbook pro\",\n  \"description\": \"16 pouce 32go ram\",\n  \"price\": 3200,\n  \"createdAt\": \"2023-12-01T14:35:43.995Z\",\n  \"updatedAt\": \"2023-12-01T14:35:43.995Z\",\n  \"publishedAt\": null,\n  \"status\": \"on sale\",\n  \"sold_by\": \"apple\",\n  \"quantity\": 130,\n  \"picture\": null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::electronic.electronic/9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::electronic.electronic",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "398"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 14:44:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9,\n    \"name\": \"macbook pro\",\n    \"description\": \"16 pouce 32go ram\",\n    \"createdAt\": \"2023-12-01T14:09:45.753Z\",\n    \"updatedAt\": \"2023-12-01T14:44:21.441Z\",\n    \"publishedAt\": null,\n    \"status\": \"on sale\",\n    \"sold_by\": \"apple\",\n    \"price\": 3200,\n    \"quantity\": 130,\n    \"picture\": null,\n    \"createdBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    },\n    \"updatedBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "delete book id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzAxNDQxMjc4LCJleHAiOjE3MDQwMzMyNzh9.FDLgTETfAq1XZ-V8ft9bCU5kyWnwkWJdle797WDIZ8I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::book.book/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::book.book",
+								"15"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete book id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::book.book/15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::book.book",
+										"15"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "428"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 14:46:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 15,\n    \"name\": \"le grand prince\",\n    \"description\": \"c'est un grand prince\",\n    \"price\": 230,\n    \"createdAt\": \"2023-12-01T14:04:25.371Z\",\n    \"updatedAt\": \"2023-12-01T14:04:25.371Z\",\n    \"publishedAt\": null,\n    \"author\": \"nathana\",\n    \"status\": \"on sale\",\n    \"sold_by\": \"dreamwork\",\n    \"quantity\": 40,\n    \"picture\": null,\n    \"createdBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    },\n    \"updatedBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete cd id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzAxNDQxMjc4LCJleHAiOjE3MDQwMzMyNzh9.FDLgTETfAq1XZ-V8ft9bCU5kyWnwkWJdle797WDIZ8I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::cd.cd/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::cd.cd",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete cd id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::cd.cd/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::cd.cd",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "399"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 14:48:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 11,\n    \"name\": \"shrek 34\",\n    \"description\": \"il y a 34 shrek\",\n    \"price\": 34,\n    \"createdAt\": \"2023-12-01T14:15:27.538Z\",\n    \"updatedAt\": \"2023-12-01T14:43:09.115Z\",\n    \"publishedAt\": null,\n    \"sold_by\": \"shrek.fr\",\n    \"status\": \"out of stock\",\n    \"quantity\": 34,\n    \"picture\": null,\n    \"createdBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    },\n    \"updatedBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete electronic id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzAxNDQxMjc4LCJleHAiOjE3MDQwMzMyNzh9.FDLgTETfAq1XZ-V8ft9bCU5kyWnwkWJdle797WDIZ8I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::electronic.electronic/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::electronic.electronic",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete electronic id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::electronic.electronic/9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::electronic.electronic",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "398"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 14:48:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9,\n    \"name\": \"macbook pro\",\n    \"description\": \"16 pouce 32go ram\",\n    \"createdAt\": \"2023-12-01T14:09:45.753Z\",\n    \"updatedAt\": \"2023-12-01T14:44:21.441Z\",\n    \"publishedAt\": null,\n    \"status\": \"on sale\",\n    \"sold_by\": \"apple\",\n    \"price\": 3200,\n    \"quantity\": 130,\n    \"picture\": null,\n    \"createdBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    },\n    \"updatedBy\": {\n        \"id\": 1,\n        \"firstname\": \"Ethan\",\n        \"lastname\": \"Ledouble\",\n        \"username\": null\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "francebillet",
+			"item": [
+				{
+					"name": "creer book francebillet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImlhdCI6MTcwMTQ0MzM0NSwiZXhwIjoxNzA0MDM1MzQ1fQ.AbkXlEPzSs9PNy45u4eLdJiB_hszfxfXqL1_hfzqCOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"les Trolls\",\n  \"description\": \"des petits Trolls\",\n  \"author\": \"LE troll\",\n  \"status\": \"on sale\",\n  \"price\": 13,\n  \"sold_by\": \"francebillet\",\n  \"quantity\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::book.book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::book.book"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "creer book francebillet",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"les Trolls\",\n  \"description\": \"des petits Trolls\",\n  \"author\": \"LE troll\",\n  \"status\": \"on sale\",\n  \"price\": 13,\n  \"sold_by\": \"francebillet\",\n  \"quantity\": 10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::book.book",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::book.book"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "419"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 15:09:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 18,\n    \"name\": \"les Trolls\",\n    \"description\": \"des petits Trolls\",\n    \"price\": 13,\n    \"createdAt\": \"2023-12-01T15:09:59.750Z\",\n    \"updatedAt\": \"2023-12-01T15:09:59.750Z\",\n    \"publishedAt\": null,\n    \"author\": \"LE troll\",\n    \"status\": \"on sale\",\n    \"sold_by\": \"dreamwork\",\n    \"quantity\": 10,\n    \"picture\": null,\n    \"createdBy\": {\n        \"id\": 11,\n        \"firstname\": \"FRANCEBILLET\",\n        \"lastname\": \"\",\n        \"username\": null\n    },\n    \"updatedBy\": {\n        \"id\": 11,\n        \"firstname\": \"FRANCEBILLET\",\n        \"lastname\": \"\",\n        \"username\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "essaye de modifier le cd de WEFIX",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImlhdCI6MTcwMTQ0MzM0NSwiZXhwIjoxNzA0MDM1MzQ1fQ.AbkXlEPzSs9PNy45u4eLdJiB_hszfxfXqL1_hfzqCOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 12,\n  \"name\": \"lo potit chat\",\n  \"description\": \"qui court dans la maison\",\n  \"price\": 1,\n  \"createdAt\": \"2023-12-01T15:15:03.101Z\",\n    \"updatedAt\": \"2023-12-01T15:15:03.101Z\",\n  \"publishedAt\": null,\n  \"author\": \"je ne sais pas \",\n  \"status\": \"on sale\",\n  \"sold_by\": \"le chat.fr\",\n  \"quantity\": 40,\n  \"picture\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::cd.cd/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::cd.cd",
+								"12"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "modifier le cd de WEFIX",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 12,\n  \"name\": \"lo potit chat\",\n  \"description\": \"qui court dans la maison\",\n  \"price\": 1,\n  \"createdAt\": \"2023-12-01T15:15:03.101Z\",\n    \"updatedAt\": \"2023-12-01T15:15:03.101Z\",\n  \"publishedAt\": null,\n  \"author\": \"je ne sais pas \",\n  \"status\": \"on sale\",\n  \"sold_by\": \"le chat.fr\",\n  \"quantity\": 40,\n  \"picture\": null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::cd.cd/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::cd.cd",
+										"12"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "95"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 15:29:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"error\": {\n        \"status\": 403,\n        \"name\": \"ForbiddenError\",\n        \"message\": \"Forbidden\",\n        \"details\": {}\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "essaye de delete le cd de WEFIX",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImlhdCI6MTcwMTQ0MzM0NSwiZXhwIjoxNzA0MDM1MzQ1fQ.AbkXlEPzSs9PNy45u4eLdJiB_hszfxfXqL1_hfzqCOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::cd.cd/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::cd.cd",
+								"15"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::cd.cd/15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::cd.cd",
+										"15"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "95"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 15:38:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"error\": {\n        \"status\": 403,\n        \"name\": \"ForbiddenError\",\n        \"message\": \"Forbidden\",\n        \"details\": {}\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "WEFIX",
+			"item": [
+				{
+					"name": "creer cd WEFIX",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNzAxNDQzNTc3LCJleHAiOjE3MDQwMzU1Nzd9.ss935M_qU3aLtHaguu2_qXiL-A4cWdmy2CmEEkShu30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Trasnformers 2\",\n  \"description\": \"c'est des robots qui se transfore en voiture\",\n  \"status\": \"on sale\",\n  \"price\": 89,\n  \"sold_by\": \"wefix\",\n  \"quantity\": 30\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::cd.cd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::cd.cd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "creer cd WEFIX",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Trasnformers 2\",\n  \"description\": \"c'est des robots qui se transfore en voiture\",\n  \"status\": \"on sale\",\n  \"price\": 89,\n  \"sold_by\": \"wefix\",\n  \"quantity\": 30\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::cd.cd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::cd.cd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "410"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 15:38:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 15,\n    \"name\": \"Trasnformers 2\",\n    \"description\": \"c'est des robots qui se transfore en voiture\",\n    \"price\": 89,\n    \"createdAt\": \"2023-12-01T15:38:22.460Z\",\n    \"updatedAt\": \"2023-12-01T15:38:22.460Z\",\n    \"publishedAt\": null,\n    \"sold_by\": \"wefix\",\n    \"status\": \"on sale\",\n    \"quantity\": 30,\n    \"picture\": null,\n    \"createdBy\": {\n        \"id\": 6,\n        \"firstname\": \"WEFIX\",\n        \"lastname\": \"\",\n        \"username\": null\n    },\n    \"updatedBy\": {\n        \"id\": 6,\n        \"firstname\": \"WEFIX\",\n        \"lastname\": \"\",\n        \"username\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "essaye de modifier le book de francebillet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNzAxNDQzNTc3LCJleHAiOjE3MDQwMzU1Nzd9.ss935M_qU3aLtHaguu2_qXiL-A4cWdmy2CmEEkShu30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 11,\n  \"name\": \"les fables de la fontaine\",\n  \"description\": \"des fables écrite par la Fontaine\",\n  \"price\": 100,\n  \"createdAt\": \"2023-12-01T15:15:03.101Z\",\n    \"updatedAt\": \"2023-12-01T15:15:03.101Z\",\n  \"publishedAt\": null,\n  \"author\": \"Jean la Fontaine\",\n  \"status\": \"on sale\",\n  \"sold_by\": \"WEFIX\",\n  \"quantity\": 43,\n  \"picture\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::book.book/18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::book.book",
+								"18"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "modifier le book de francebillet",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 11,\n  \"name\": \"les fables de la fontaine\",\n  \"description\": \"des fables écrite par la Fontaine\",\n  \"price\": 100,\n  \"createdAt\": \"2023-12-01T15:15:03.101Z\",\n    \"updatedAt\": \"2023-12-01T15:15:03.101Z\",\n  \"publishedAt\": null,\n  \"author\": \"Jean la Fontaine\",\n  \"status\": \"on sale\",\n  \"sold_by\": \"WEFIX\",\n  \"quantity\": 43,\n  \"picture\": null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::book.book/18",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::book.book",
+										"18"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "95"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 15:33:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"error\": {\n        \"status\": 403,\n        \"name\": \"ForbiddenError\",\n        \"message\": \"Forbidden\",\n        \"details\": {}\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "essaye de delete le book de francebillet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNzAxNDQzNTc3LCJleHAiOjE3MDQwMzU1Nzd9.ss935M_qU3aLtHaguu2_qXiL-A4cWdmy2CmEEkShu30",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1337/content-manager/collection-types/api::book.book/18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"content-manager",
+								"collection-types",
+								"api::book.book",
+								"18"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:1337/content-manager/collection-types/api::book.book/18",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "1337",
+									"path": [
+										"content-manager",
+										"collection-types",
+										"api::book.book",
+										"18"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Strapi <strapi.io>"
+								},
+								{
+									"key": "Content-Length",
+									"value": "95"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 01 Dec 2023 15:36:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"error\": {\n        \"status\": 403,\n        \"name\": \"ForbiddenError\",\n        \"message\": \"Forbidden\",\n        \"details\": {}\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "prendre le token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"ledoubleethan@gmail.com\",\n  \"password\": \"Admin123\",\n  \"rememberMe\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/admin/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
