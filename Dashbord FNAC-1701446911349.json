@@ -1,0 +1,857 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 12,
+      "panels": [],
+      "title": "product to be published",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "id": 13,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+          },
+          "queryText": "SELECT name, sold_by\nFROM electronics\nWHERE published_at IS NULL OR published_at = ''\nUNION\nSELECT name, sold_by\nFROM books\nWHERE published_at IS NULL OR published_at = ''\nUNION\nSELECT name, sold_by\nFROM cds\nWHERE published_at IS NULL OR published_at = '';\n",
+          "queryType": "table",
+          "rawQueryText": "SELECT name, sold_by\nFROM electronics\nWHERE published_at IS NULL OR published_at = ''\nUNION\nSELECT name, sold_by\nFROM books\nWHERE published_at IS NULL OR published_at = ''\nUNION\nSELECT name, sold_by\nFROM cds\nWHERE published_at IS NULL OR published_at = '';\n",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "product to be published",
+      "type": "table"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 9
+      },
+      "id": 11,
+      "panels": [],
+      "title": "graph of quantities for each catégories",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisGridShow": true,
+            "axisLabel": "quantity",
+            "axisPlacement": "auto",
+            "axisWidth": 70,
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 10
+      },
+      "id": 1,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.64,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": -15,
+        "xTickLabelSpacing": 0
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+          },
+          "queryText": "SELECT quantity,name FROM cds",
+          "queryType": "table",
+          "rawQueryText": "SELECT quantity,name FROM cds",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "quantity cds",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 10
+      },
+      "id": 3,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "",
+          "values": true
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+          },
+          "queryText": "SELECT quantity,name FROM electronics",
+          "queryType": "table",
+          "rawQueryText": "SELECT quantity,name FROM electronics",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "quantity electronics",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 18
+      },
+      "id": 2,
+      "options": {
+        "displayMode": "gradient",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "namePlacement": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "",
+          "limit": 10,
+          "values": true
+        },
+        "showUnfilled": true,
+        "valueMode": "color"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+          },
+          "queryText": "SELECT quantity,name FROM books",
+          "queryType": "table",
+          "rawQueryText": "SELECT quantity,name FROM books",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "quantity books",
+      "type": "bargauge"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 26
+      },
+      "id": 10,
+      "panels": [],
+      "title": "graph of quantities for each supplier",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "quantity",
+            "axisPlacement": "left",
+            "axisWidth": 70,
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 3,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 27
+      },
+      "id": 9,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.68,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": false
+        },
+        "orientation": "auto",
+        "showValue": "always",
+        "stacking": "none",
+        "text": {
+          "valueSize": 30
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": -15,
+        "xTickLabelSpacing": 0
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+          },
+          "queryText": "SELECT e.name AS electronics_name, e.quantity AS electronics_quantity\nFROM electronics e\nWHERE e.sold_by = 'PC.CLINIC'\nUNION\nSELECT b.name AS books_name, b.quantity AS books_quantity\nFROM books b\nWHERE b.sold_by = 'PC.CLINIC'\nUNION\nSELECT c.name AS cds_name, c.quantity AS cds_quantity\nFROM cds c\nWHERE c.sold_by = 'PC.CLINIC';",
+          "queryType": "table",
+          "rawQueryText": "SELECT e.name AS electronics_name, e.quantity AS electronics_quantity\nFROM electronics e\nWHERE e.sold_by = 'PC.CLINIC'\nUNION\nSELECT b.name AS books_name, b.quantity AS books_quantity\nFROM books b\nWHERE b.sold_by = 'PC.CLINIC'\nUNION\nSELECT c.name AS cds_name, c.quantity AS cds_quantity\nFROM cds c\nWHERE c.sold_by = 'PC.CLINIC';",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "PC.CLINIC product",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 27
+      },
+      "id": 4,
+      "options": {
+        "displayMode": "basic",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
+        "namePlacement": "auto",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "",
+          "values": true
+        },
+        "showUnfilled": true,
+        "valueMode": "color"
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+          },
+          "queryText": "SELECT e.name AS electronics_name, e.quantity AS electronics_quantity\nFROM electronics e\nWHERE e.sold_by = 'samsung'\nUNION\nSELECT b.name AS books_name, b.quantity AS books_quantity\nFROM books b\nWHERE b.sold_by = 'samsung'\nUNION\nSELECT c.name AS cds_name, c.quantity AS cds_quantity\nFROM cds c\nWHERE c.sold_by = 'samsung';\n",
+          "queryType": "table",
+          "rawQueryText": "SELECT e.name AS electronics_name, e.quantity AS electronics_quantity\nFROM electronics e\nWHERE e.sold_by = 'samsung'\nUNION\nSELECT b.name AS books_name, b.quantity AS books_quantity\nFROM books b\nWHERE b.sold_by = 'samsung'\nUNION\nSELECT c.name AS cds_name, c.quantity AS cds_quantity\nFROM cds c\nWHERE c.sold_by = 'samsung';\n",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "samsung product",
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 35
+      },
+      "id": 8,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "",
+          "values": true
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+          },
+          "queryText": "SELECT e.name AS electronics_name, e.quantity AS electronics_quantity\nFROM electronics e\nWHERE e.sold_by = 'BilletReduc'\nUNION\nSELECT b.name AS books_name, b.quantity AS books_quantity\nFROM books b\nWHERE b.sold_by = 'BilletReduc'\nUNION\nSELECT c.name AS cds_name, c.quantity AS cds_quantity\nFROM cds c\nWHERE c.sold_by = 'BilletReduc';",
+          "queryType": "table",
+          "rawQueryText": "SELECT e.name AS electronics_name, e.quantity AS electronics_quantity\nFROM electronics e\nWHERE e.sold_by = 'BilletReduc'\nUNION\nSELECT b.name AS books_name, b.quantity AS books_quantity\nFROM books b\nWHERE b.sold_by = 'BilletReduc'\nUNION\nSELECT c.name AS cds_name, c.quantity AS cds_quantity\nFROM cds c\nWHERE c.sold_by = 'BilletReduc';",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "BilletReduc product",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisGridShow": true,
+            "axisLabel": "quantity",
+            "axisPlacement": "auto",
+            "axisWidth": 70,
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 35
+      },
+      "id": 7,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.69,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": false,
+          "width": 0
+        },
+        "orientation": "auto",
+        "showValue": "always",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": -15,
+        "xTickLabelSpacing": 0
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+          },
+          "queryText": "SELECT e.name AS electronics_name, e.quantity AS electronics_quantity\nFROM electronics e\nWHERE e.sold_by = 'dreamwork'\nUNION\nSELECT b.name AS books_name, b.quantity AS books_quantity\nFROM books b\nWHERE b.sold_by = 'dreamwork'\nUNION\nSELECT c.name AS cds_name, c.quantity AS cds_quantity\nFROM cds c\nWHERE c.sold_by = 'dreamwork';",
+          "queryType": "table",
+          "rawQueryText": "SELECT e.name AS electronics_name, e.quantity AS electronics_quantity\nFROM electronics e\nWHERE e.sold_by = 'dreamwork'\nUNION\nSELECT b.name AS books_name, b.quantity AS books_quantity\nFROM books b\nWHERE b.sold_by = 'dreamwork'\nUNION\nSELECT c.name AS cds_name, c.quantity AS cds_quantity\nFROM cds c\nWHERE c.sold_by = 'dreamwork';",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "dreamwork product",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisGridShow": true,
+            "axisLabel": "quantity",
+            "axisPlacement": "left",
+            "axisWidth": 70,
+            "fillOpacity": 100,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 43
+      },
+      "id": 6,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.68,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": false
+        },
+        "orientation": "auto",
+        "showValue": "always",
+        "stacking": "none",
+        "text": {
+          "valueSize": 30
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": -15,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+          },
+          "queryText": "SELECT e.name AS electronics_name, e.quantity AS electronics_quantity\nFROM electronics e\nWHERE e.sold_by = 'Nature & Découvertes'\nUNION\nSELECT b.name AS books_name, b.quantity AS books_quantity\nFROM books b\nWHERE b.sold_by = 'Nature & Découvertes'\nUNION\nSELECT c.name AS cds_name, c.quantity AS cds_quantity\nFROM cds c\nWHERE c.sold_by = 'Nature & Découvertes';",
+          "queryType": "table",
+          "rawQueryText": "SELECT e.name AS electronics_name, e.quantity AS electronics_quantity\nFROM electronics e\nWHERE e.sold_by = 'Nature & Découvertes'\nUNION\nSELECT b.name AS books_name, b.quantity AS books_quantity\nFROM books b\nWHERE b.sold_by = 'Nature & Découvertes'\nUNION\nSELECT c.name AS cds_name, c.quantity AS cds_quantity\nFROM cds c\nWHERE c.sold_by = 'Nature & Découvertes';",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "Nature & Découvertes product",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "frser-sqlite-datasource",
+        "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 43
+      },
+      "id": 5,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "",
+          "values": true
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": false
+      },
+      "pluginVersion": "10.2.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "e8ff0a44-ed11-4d4d-b88e-4ca84e1c3872"
+          },
+          "queryText": "SELECT e.name AS electronics_name, e.quantity AS electronics_quantity\nFROM electronics e\nWHERE e.sold_by = 'francebillet'\nUNION\nSELECT b.name AS books_name, b.quantity AS books_quantity\nFROM books b\nWHERE b.sold_by = 'francebillet'\nUNION\nSELECT c.name AS cds_name, c.quantity AS cds_quantity\nFROM cds c\nWHERE c.sold_by = 'francebillet';",
+          "queryType": "table",
+          "rawQueryText": "SELECT e.name AS electronics_name, e.quantity AS electronics_quantity\nFROM electronics e\nWHERE e.sold_by = 'francebillet'\nUNION\nSELECT b.name AS books_name, b.quantity AS books_quantity\nFROM books b\nWHERE b.sold_by = 'francebillet'\nUNION\nSELECT c.name AS cds_name, c.quantity AS cds_quantity\nFROM cds c\nWHERE c.sold_by = 'francebillet';",
+          "refId": "A",
+          "timeColumns": [
+            "time",
+            "ts"
+          ]
+        }
+      ],
+      "title": "france billet product",
+      "type": "gauge"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 38,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Dashbord FNAC",
+  "uid": "d8224571-e4f8-4c99-97fe-9bf1ebcf3177",
+  "version": 9,
+  "weekStart": ""
+}

@@ -362,6 +362,103 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiBookBook extends Schema.CollectionType {
+  collectionName: 'books';
+  info: {
+    singularName: 'book';
+    pluralName: 'books';
+    displayName: 'book';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    description: Attribute.Text;
+    author: Attribute.String;
+    picture: Attribute.Media;
+    status: Attribute.Enumeration<['in stock', 'out of stock', 'on sale']> &
+      Attribute.Required;
+    sold_by: Attribute.String;
+    price: Attribute.Decimal;
+    quantity: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::book.book', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::book.book', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCdCd extends Schema.CollectionType {
+  collectionName: 'cds';
+  info: {
+    singularName: 'cd';
+    pluralName: 'cds';
+    displayName: 'cd';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    description: Attribute.Text;
+    picture: Attribute.Media;
+    sold_by: Attribute.String;
+    status: Attribute.Enumeration<['in stock', 'out of stock', 'on sale']>;
+    price: Attribute.Decimal;
+    quantity: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::cd.cd', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::cd.cd', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiElectronicElectronic extends Schema.CollectionType {
+  collectionName: 'electronics';
+  info: {
+    singularName: 'electronic';
+    pluralName: 'electronics';
+    displayName: 'electronic';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    description: Attribute.Text;
+    picture: Attribute.Media;
+    status: Attribute.Enumeration<['in stock', 'out of stock', 'on sale']>;
+    sold_by: Attribute.String;
+    price: Attribute.Decimal;
+    quantity: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::electronic.electronic',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::electronic.electronic',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -677,103 +774,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiBookBook extends Schema.CollectionType {
-  collectionName: 'books';
-  info: {
-    singularName: 'book';
-    pluralName: 'books';
-    displayName: 'book';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    description: Attribute.Text;
-    author: Attribute.String;
-    picture: Attribute.Media;
-    status: Attribute.Enumeration<['in stock', 'out of stock', 'on sale']> &
-      Attribute.Required;
-    sold_by: Attribute.String;
-    price: Attribute.Decimal;
-    quantity: Attribute.Integer;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::book.book', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::book.book', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
-export interface ApiCdCd extends Schema.CollectionType {
-  collectionName: 'cds';
-  info: {
-    singularName: 'cd';
-    pluralName: 'cds';
-    displayName: 'cd';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    description: Attribute.Text;
-    picture: Attribute.Media;
-    sold_by: Attribute.String;
-    status: Attribute.Enumeration<['in stock', 'out of stock', 'on sale']>;
-    price: Attribute.Decimal;
-    quantity: Attribute.Integer;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::cd.cd', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::cd.cd', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
-export interface ApiElectronicElectronic extends Schema.CollectionType {
-  collectionName: 'electronics';
-  info: {
-    singularName: 'electronic';
-    pluralName: 'electronics';
-    displayName: 'electronic';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    description: Attribute.Text;
-    picture: Attribute.Media;
-    status: Attribute.Enumeration<['in stock', 'out of stock', 'on sale']>;
-    sold_by: Attribute.String;
-    price: Attribute.Decimal;
-    quantity: Attribute.Integer;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::electronic.electronic',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::electronic.electronic',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -784,15 +784,15 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::book.book': ApiBookBook;
+      'api::cd.cd': ApiCdCd;
+      'api::electronic.electronic': ApiElectronicElectronic;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::book.book': ApiBookBook;
-      'api::cd.cd': ApiCdCd;
-      'api::electronic.electronic': ApiElectronicElectronic;
     }
   }
 }
