@@ -61,7 +61,7 @@ Dans Strapi, vous pouvez cr&er des roles pour limiter des accès ou en accorder.
 Dans grafana, installer SQlite, puis allez dans le projet pour copier le chemin d'acces de la base de donnée et allez le coller dans le SQlite et sauvegarder.
 
 
-Créer un dashbord puis ajouter votre base de donnée. Apres ça vous pouvez faire des requêtes SQL pour avoir un graph de vos données séléctionné
+Créer un dashbord puis ajouter votre base de donnée. Apres ça vous pouvez faire des requêtes SQL pour avoir un graph de vos données séléctionné ou vous pouvez importer le Fnacdashbord.json qui se trouve dans le github
 
 
 ## Base de donnée fournie
