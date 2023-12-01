@@ -48,6 +48,12 @@ installez GraphQL, entré cette commande dans le terminal : npm install @strapi/
 
 ## Configuration
 
+Pour accéder au panel, le mail et le mot de passe admin sont : ledoubleethan@gmail.com     /      Admin123
+
+Pour les utilsateurs déjà créer, pour le fnace manager c'est son mail + manager123
+
+pour les seller, c'est leur mail + Seller123
+
 Dans Strapi, vous pouvez cr&er des roles pour limiter des accès ou en accorder. Vous pouvez aussi créer votre base de donnée
 
 
