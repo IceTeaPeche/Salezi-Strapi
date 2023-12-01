@@ -58,4 +58,7 @@ Dans grafana, installer SQlite, puis allez dans le projet pour copier le chemin 
 Créer un dashbord puis ajouter votre base de donnée. Apres ça vous pouvez faire des requêtes SQL pour avoir un graph de vos données séléctionné
 
 
+## documentation technique
+
+pour en savoir plus sur les routes de l'API, une fois le  serveur lancer copier coller ce lien : localhost:1337/documentation/v1.0.0
 
